@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            display: grid;  
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <section>
+            <h1 v-show="inProgress.length">
+                in progress
+            </h1>
+            <ul>
+                <li v-for="task in inProgress" :key="task.id">
+                    <label>
+                        {{task.name}}
+                        <input type="checkbox" v-model="task.complete">
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 v-show="complet.length">
+                complete
+            </h1>
+            <ul>
+                <li v-for="task in complet"  :key="task.id  ">
+                    <label>
+                        {{task.name}}
+                        <input type="checkbox" v-model="task.complete">
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+
+        <pre>
+            {{listTasks}}
+        </pre>
+
+
+
+
+    </div>
+    <script>
+
+        
+
+let data = {
+
+
+        }
+        Vue.createApp(data).mount('#app');
+    </script>
+</body>
+</html>

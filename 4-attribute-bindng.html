@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+
+        }
+        body{  
+            display: grid;
+            place-items: center;
+        }
+        
+        .text-green{
+            color:green;
+        }
+        .text-gray{
+            color:gray ;
+        }
+          
+
+</style>
+
+
+</head>
+<body>
+    <div id="app">
+
+
+        <button v-Bind:class='activit?"text-green":"text-gray"' v-on:click="toggle" > click the button</button>
+
+    </div>
+
+
+
+    <script>
+
+        // the normal bind not worck with the attribute 
+        // so we use V-bind key word
+        // v-bind = :
+
+        // v-on ==> to trigare the event;
+        // v-on = @
+
+        let data = {
+                data(){
+                    return {activit:true}; 
+                },
+                methods : {
+                    toggle(){
+                        this.activit = ! this.activit;
+                    }
+                }
+        }
+        Vue.createApp(data).mount('#app');
+        
+    </script>
+</body>
+</html>

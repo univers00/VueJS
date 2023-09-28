@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{test}}
+        {{test.length}}
+
+    </div>
+
+
+
+    <script>
+        let data = {
+                data(){
+                    return {test:"test vue.js"};
+                }, 
+        }
+        Vue.createApp(data).mount('#app');
+        
+    </script>
+</body>
+</html>

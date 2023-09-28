@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+
+        }
+        body{  
+            display: grid;
+            place-items: center;
+        }
+        
+        .text-green{
+            color:green;
+        }
+        .text-gray{
+            color:gray ;
+        }
+          
+
+</style>
+
+
+</head>
+<body>
+
+
+
+    <div id="app">
+
+    </div>
+
+
+
+    <script type="module">
+ 
+        import data from "./components/list_tasks.js"
+
+        Vue.createApp(data).mount('#app');
+        
+    </script>
+</body>
+</html>

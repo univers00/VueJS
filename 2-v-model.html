@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+
+
+        <label>
+            {{test}}
+            <input style="display: block;width:400px  ;" type="text" v-model="test">
+        </label>
+
+    </div>
+
+    
+    <!-- value test in bind with the input field -->
+
+
+    <script>
+        let data = {
+                data(){
+                    return {test:"if i change test in input field the lable will change to.   "};
+                }, 
+        }
+        Vue.createApp(data).mount('#app');
+        
+    </script>
+</body>
+</html>
